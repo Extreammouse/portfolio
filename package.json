@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://extreammouse.github.io/Extreammouse",
+  
+  "homepage": "https://Extreammouse.github.io/portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
