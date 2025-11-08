@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, FileText, Download, X, Link as LinkIcon } from 'lucide-react';
+import React from 'react';
+import { Mail, Phone, MapPin, Github, Linkedin, Download } from 'lucide-react';
 
 import { XIcon as LucideIcon } from 'lucide-react';
 
@@ -36,111 +36,26 @@ const ContactCard: React.FC<ContactCardProps> = ({ icon: Icon, title, value, lin
   );
 };
 
-const ResumeSection = () => {
-  const [driveLink, setDriveLink] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-  
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    if (driveLink && driveLink.includes('drive.google.com')) {
-      setSubmitted(true);
-    } else {
-      alert('Please enter a valid Google Drive link');
-    }
-  };
-  
-  const resetLink = () => {
-    setDriveLink('');
-    setSubmitted(false);
-  };
-  
-  // Convert Google Drive link to direct download link
-  const getDirectDownloadLink = (driveLink: string) => {
-    // For files with format: https://drive.google.com/file/d/FILE_ID/view
-    if (driveLink.includes('/file/d/')) {
-      const fileId = driveLink.split('/file/d/')[1].split('/')[0];
-      return `https://drive.google.com/uc?export=download&id=${fileId}`;
-    }
-    // For files with format: https://drive.google.com/open?id=FILE_ID
-    else if (driveLink.includes('?id=')) {
-      const fileId = driveLink.split('?id=')[1].split('&')[0];
-      return `https://drive.google.com/uc?export=download&id=${fileId}`;
-    }
-    // Return original link if format is not recognized
-    return driveLink;
-  };
-  
-  return (
-    <div className="bg-gradient-to-r from-indigo-900/30 to-purple-900/30 backdrop-filter backdrop-blur-md border border-indigo-500/30 rounded-xl p-6">
-      <h2 className="text-xl font-bold text-white mb-4 flex items-center">
-        <FileText className="mr-2 text-indigo-400" size={20} />
-        Resume
-      </h2>
-      
-      {!submitted ? (
-        <form onSubmit={handleSubmit}>
-          <div className="bg-black/30 rounded-xl p-4 border border-gray-700/50">
-            <label className="block text-sm text-white mb-2">Add your Google Drive resume link:</label>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="url"
-                value={driveLink}
-                onChange={(e) => setDriveLink(e.target.value)}
-                placeholder="https://drive.google.com/file/d/..."
-                className="flex-1 px-4 py-2 rounded-lg bg-black/40 border border-gray-700 text-white text-sm focus:outline-none focus:border-indigo-500"
-                required
-              />
-              <button 
-                type="submit"
-                className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-white font-medium transition-all duration-300"
-              >
-                Save Link
-              </button>
-            </div>
-            <p className="mt-2 text-xs text-gray-400">Your Google Drive document must be accessible to anyone with the link</p>
-          </div>
-        </form>
-      ) : (
-        <div className="bg-green-900/20 rounded-xl p-4 border border-green-500/30">
-          <div className="flex items-center justify-between mb-3">
-            <div className="flex items-center">
-              <LinkIcon className="text-green-400 mr-2" size={16} />
-              <span className="text-white font-medium">Resume Link Added</span>
-            </div>
-            <button 
-              onClick={resetLink}
-              className="p-1.5 bg-black/20 hover:bg-black/40 rounded-lg transition-colors duration-300"
-            >
-              <X size={14} className="text-white" />
-            </button>
-          </div>
-          
-          <div className="flex flex-wrap gap-2">
-            <a 
-              href={driveLink} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 flex items-center"
-            >
-              <LinkIcon size={14} className="mr-2" />
-              View Resume
-            </a>
-            <a 
-              href={getDirectDownloadLink(driveLink)} 
-              download="resume"
-              className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white text-sm font-medium transition-all duration-300 flex items-center"
-            >
-              <Download size={14} className="mr-2" />
-              Download Resume
-            </a>
-          </div>
-        </div>
-      )}
-    </div>
-  );
+// Convert Google Drive link to direct download link
+const getDirectDownloadLink = (driveLink: string) => {
+  // For files with format: https://drive.google.com/file/d/FILE_ID/view or /edit
+  const match = driveLink.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+  if (match && match[1]) {
+    return `https://drive.google.com/uc?export=download&id=${match[1]}`;
+  }
+  // For files with format: https://drive.google.com/open?id=FILE_ID
+  const idMatch = driveLink.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+  if (idMatch && idMatch[1]) {
+    return `https://drive.google.com/uc?export=download&id=${idMatch[1]}`;
+  }
+  // Return original link if format is not recognized
+  return driveLink;
 };
 
 const Contact = () => {
+  // Your Google Drive resume link - just update this URL to update your resume across the site
+  const resumeDriveLink = "https://drive.google.com/file/d/1aR7Ng8bH7F4bCOlkaxPIirf57h8TsTk8/view?usp=sharing";
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white py-12 px-4">
       <div className="max-w-5xl mx-auto">
@@ -203,16 +118,14 @@ const Contact = () => {
               icon={Download} 
               title="Resume" 
               value="Download Resume" 
-              link="https://drive.google.com/file/d/1Cvo9cvDbvjtr8m2AU_4_7eSQH-PZDGiQ/view?usp=sharing"
+              link={getDirectDownloadLink(resumeDriveLink)}
               color="bg-gradient-to-r from-purple-500 to-purple-600"
             />
           </div>
           
-          {/* Resume and Map Column */}
-          <div className="lg:col-span-2" id="resume-section">
-            <ResumeSection />
-            
-            <div className="mt-6 rounded-xl overflow-hidden relative h-64 flex items-center justify-center">
+          {/* Map Column */}
+          <div className="lg:col-span-2">
+            <div className="rounded-xl overflow-hidden relative h-96 flex items-center justify-center">
               <div className="absolute inset-0 bg-black/40 backdrop-filter backdrop-blur-sm z-10"></div>
               <img 
                 src="/api/placeholder/800/400" 

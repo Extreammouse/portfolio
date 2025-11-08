@@ -60,7 +60,7 @@ const Education = () => {
               </div>
             </div>
             <div className="space-y-2 text-gray-300">
-              <p>Coursework: Big-Data Management, Machine Learning, Knowledge discovery and data mining, Algorithms, NLP, Mobile and ubiquitous, Foundation of computer science</p>
+              <p>Coursework: Big-Data Management, Machine Learning, Knowledge discovery and data mining, Algorithms, NLP, Mobile and ubiquitous, Foundation of computer science, Design of Software Systems</p>
               <p>GPA: 4.0/4.0</p>
             </div>
           </motion.div>

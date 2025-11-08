@@ -4,15 +4,31 @@ import { Calendar, MapPin } from 'lucide-react';
 
 const experiences = [
   {
-    "id": 1,
-    "role": "DevOps Engineer",
-    "company": "Edelweiss",
-    "duration": "2022 - 2024",
-    "location": "Mumbai, India",
-    "description": "• Implemented enterprise CI/CD pipelines with Jenkins, reducing deployment times by 90%. • Built automated infrastructure using Python and Ansible, reducing deployment time from 4 hours to 1 minute. • Deployed Docker/Kubernetes containerization solutions and multiple ELK stacks for efficient workload scaling. • Automated MongoDB and Kafka cluster setup using Bash/Ansible, reducing setup time by 80%.    • Developed custom ELK stack with Python logging agent for real-time monitoring and analytics. • Automated Java artifact deployment with Jira integration, achieving zero-downtime deployments. • Created configurable data pipeline processing financial instruments daily with 99.9% accuracy, enabling real-time trading decisions."
+    id: 1,
+    role: "Embedded Software Development Engineer ",
+    company: "LightMatter",
+    duration: "May 2025 – December 2025",
+    location: "Boston, United States",
+    description: "OS & Low-Level Dev: Developed a custom USB communication stack in C, and implemented MicroPython on Infineon boards, and customized Xilinx Linux kernels with device trees and root filesystems• HIL & Testing: Engineered a robust Hardware-in-the-Loop pipeline using Aardvark and Pytest to verify critical state machine flow on Laser-microcontrollar; integrated AI analysis for failure suggestions. • Firmware Protocols: Developed embedded firmware in C for versioning and automated builds via GitHub Actions, supporting I2C/I3C protocols and utilizing a Logic Analyzer for debugging. • DevOps & Monitoring: Implemented advanced Ansible configurations and created System-D files for restart. And a smart Grafana dashboard with an AI analysis app for real-time developer solutions."
+  },
+    {
+    id: 1.2,
+    role: "Research Assistant",
+    company: "Worcester Polytechnique Institute (PROFESOR AGU)",
+    duration: "April 2025 – April 2026",
+    location: "Worcester, United States",
+    description: "Developed a mobile App in React-expo for (IOS & ANDROID),with offline, on-device ML wound analysis using ONNIX models, achieving high performance by eliminating cloud dependency."
   },
   {
     id: 2,
+    role: "DevOps Engineer",
+    company: "Edelweiss",
+    duration: "2022 - 2024",
+    location: "Mumbai, India",
+    description: "Implemented enterprise CI/CD pipelines with Jenkins, reducing deployment times by 90%. • Built automated infrastructure using Python and Ansible, reducing deployment time from 4 hours to 1 minute. • Deployed Docker/Kubernetes containerization solutions and multiple ELK stacks for efficient workload scaling. • Automated MongoDB and Kafka cluster setup using Bash/Ansible, reducing setup time by 80%. • Developed custom ELK stack with Python logging agent for real-time monitoring and analytics. • Automated Java artifact deployment with Jira integration, achieving zero-downtime deployments. • Created configurable data pipeline processing financial instruments daily with 99.9% accuracy, enabling real-time trading decisions."
+  },
+  {
+    id: 3,
     role: "Biomedical Engineer Intern",
     company: "Kokilaben Dhirubhai Ambani Hospital",
     duration: "June 2021 – July 2021",
@@ -20,7 +36,7 @@ const experiences = [
     description: "• Led maintenance of critical ICU/OR equipment (ventilators, X-ray machines, ECG systems). • performed real-time troubleshooting of surgical robots during procedures • implemented predictive maintenance protocols that reduced device downtime • Collaborated with surgical teams on prosthetics optimization ."
   },
   {
-    id: 3,
+    id: 4,
     role: "Biomedical Engineer Intern",
     company: "BSES MG Hospital",
     duration: "Jan 2020 – Feb 2020",

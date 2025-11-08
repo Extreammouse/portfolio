@@ -152,7 +152,7 @@ const Home = () => {
             transition={{ delay: 0.4 }}
             className="text-3xl font-semibold mb-4 text-gray-300"
           >
-            Software Developer and DevOps Engineer
+            Embedded Firmware Engineer & DevOps
           </motion.h2>
           
           <motion.p
@@ -161,8 +161,8 @@ const Home = () => {
             transition={{ delay: 0.5 }}
             className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto text-center"
           >
-            Bridging the gap between development and operations, I leverage my expertise in software development and DevOps practices to design cloud infrastructure, build CI/CD pipelines, and automate deployments.
-            {/* Hi, I'm a biomedical engineer and software developer working where code meets cure. Bridging the gap between medical science and technology through innovative solutions
+            Love for Low-level Embedded firmware Development, Custom OS Image/kernel development for FPGA, Custom USB/stack development for Microcontrollar. Experienced in DevOps automation and tools with CI/CD pipelines, agentic AI integration, and Hardware-in-the-Loop (HIL) test frameworks for embedded systems.
+            {/* Hi, I'm a biomedical engineer and software developer working where code meets cure. Bridging the gap between medical science and technology through innovative solutions 
             and software development. */}
           </motion.p>
           
