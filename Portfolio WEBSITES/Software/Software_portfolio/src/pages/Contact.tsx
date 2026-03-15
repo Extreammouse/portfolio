@@ -54,7 +54,7 @@ const getDirectDownloadLink = (driveLink: string) => {
 
 const Contact = () => {
   // Your Google Drive resume link - just update this URL to update your resume across the site
-  const resumeDriveLink = "https://drive.google.com/file/d/1aR7Ng8bH7F4bCOlkaxPIirf57h8TsTk8/view?usp=sharing";
+  const resumeDriveLink = "https://drive.google.com/file/d/1zT0CaEvVRJR-u2fvHmBUe8Wf6IHiT06R/view?usp=share_link";
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white py-12 px-4">
