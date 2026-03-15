@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Award } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 
 const BlurredBackground = () => {
   // Create different sized and colored blurred circles

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   Brain, Code, Microscope, FlaskRound as Flask, Dna, Battery as Bacteria,
-  Binary, Database, Server, Cpu, Globe, Cloud, Laptop, Monitor, Network,
+  Binary, Database, Server, Cpu, Globe, Cloud, Laptop, Network,
   Smartphone, Tablet, Wifi, TestTube2
 } from 'lucide-react';
 import Projects from './Projects';

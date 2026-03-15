@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { Code, Brain, Briefcase, GraduationCap, Mail } from 'lucide-react';
 
 const Navbar = () => {
