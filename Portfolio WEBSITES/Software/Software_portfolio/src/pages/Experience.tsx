@@ -14,10 +14,10 @@ const experiences = [
     {
     id: 1.2,
     role: "Research Assistant",
-    company: "Worcester Polytechnique Institute (PROFESOR AGU)",
+    company: "Worcester Polytechnic Institute — Prof. Agu's Lab",
     duration: "April 2025 – April 2026",
     location: "Worcester, United States",
-    description: "Developed a mobile App in React-expo for (IOS & ANDROID),with offline, on-device ML wound analysis using ONNIX models, achieving high performance by eliminating cloud dependency."
+    description: "• Developed a cross-platform mobile app in React Native (Expo) for iOS & Android enabling offline, on-device wound analysis using ONNX-quantized ML models — eliminating cloud dependency and protecting patient data. • Designed and integrated a fully offline Android Translation App using the Nexa SDK with GGUF quantized LLMs, enabling real-time multilingual support in low-connectivity clinical environments. • Implemented optimized on-device inference pipelines in Kotlin leveraging Android's NPU/CPU scheduling to maintain low latency on resource-constrained mobile hardware. • Collaborated with medical staff to validate model accuracy against clinical benchmarks, iterating on model selection and quantization levels to balance accuracy and battery efficiency."
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const experiences = [
     company: "Kokilaben Dhirubhai Ambani Hospital",
     duration: "June 2021 – July 2021",
     location: "Mumbai, India",
-    description: "• Led maintenance of critical ICU/OR equipment (ventilators, X-ray machines, ECG systems). • performed real-time troubleshooting of surgical robots during procedures • implemented predictive maintenance protocols that reduced device downtime • Collaborated with surgical teams on prosthetics optimization ."
+    description: "• Led preventive maintenance and calibration of critical ICU and OR equipment including ventilators, X-ray machines, ECG/EEG systems, and infusion pumps per ISO 13485 standards. • Performed real-time troubleshooting of da Vinci surgical robots alongside surgeons during live procedures, ensuring zero procedure interruptions. • Implemented predictive maintenance protocols and inspection schedules that measurably reduced device downtime across departments. • Collaborated with surgical teams on prosthetics fitting and assistive device optimization, supporting patient rehabilitation post-surgery. • Documented service records and calibration logs in compliance with hospital quality management systems."
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const experiences = [
     company: "BSES MG Hospital",
     duration: "Jan 2020 – Feb 2020",
     location: "Mumbai, India",
-    description: "Con• Calibrated laser systems, robotic surgical equipment, and cell culture monitoring equipment per ISO 13485 standards • Tracked medical device inventory & schedule maintenance with vendors"
+    description: "• Calibrated laser systems, robotic surgical equipment, and cell culture monitoring instruments per ISO 13485 standards, ensuring measurement accuracy and patient safety. • Maintained and tracked medical device inventory across departments, coordinating with vendors for scheduled servicing and procurement. • Assisted biomedical engineering team in evaluating new equipment installations and verifying operational compliance with regulatory requirements. • Gained hands-on exposure to hospital-grade diagnostic and therapeutic devices across radiology, pathology, and OT departments."
   }
 ];
 

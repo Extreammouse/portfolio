@@ -20,6 +20,7 @@ import bot from './images/tradebot.jpg';
 import webscraper1 from './images/webscraper_iisl.png';
 import webscraper2 from './images/webscraper.jpg';
 import quicksend from './images/Quicksend.png';
+import zeroclaw from './images/zeroclaw.png';
 import printer from './images/3dprint.jpg';
 import metacampus from './images/metacampus.png';
 import grpc from './images/GRPC.png';
@@ -45,6 +46,13 @@ interface ProjectCardProps {
 }
 
 const projects: Project[] = [
+  {
+    id: 0,
+    title: "Co-Founder, ZeroClaw — Talk to your Hardware 🦀",
+    description: "Bridging the gap between Natural Language and Hardware. ZeroClaw is a platform where you text on Telegram: 'Turn on the LED' → physical LED turns on, or 'I have a servo on pin 15, move it 90°' → ZeroClaw identifies the board, writes the firmware, flashes it via BOOTSEL, and moves the servo. Built a 5-layer architecture: User Interface (Telegram/WhatsApp/Discord/CLI), LLM Agent + RAG for datasheet context, ZeroClaw HAL (ToolRegistry) auto-generating JSON schemas from Rust tools, Transport Abstraction (Serial/UF2/SWD via probe-rs), and Device Registry with USB VID/PID auto-scanning. The LLM doesn't just control hardware — it writes firmware on demand. Named top hackers at Sundai Bug hackathon. Reached 15.8k stars and 1.7k forks on GitHub.",
+    image: zeroclaw,
+    tags: ["Rust", "Embedded Systems", "AI Agents", "LLM", "RAG", "Telegram Bot", "Hardware", "Open Source"]
+  },
   {
     id: 1,
     title: "Co-Founder & Technical Lead, QuickSend_AI",
@@ -232,6 +240,13 @@ const projects: Project[] = [
     description: "Developed an Android app to detect face contour and segments with face detection using MLKit in Android Studio.",
     image: android,
     tags: ["Machine Learning", "Kotlin", "Android Studio"]
+  },
+  {
+    id: 28,
+    title: "Offline Android Translator App — Nexa SDK + GGUF",
+    description: "Built a fully offline Android translation application using the Nexa SDK with GGUF quantized large language models running entirely on-device. Leveraged Android Studio and Kotlin to integrate GGUF model inference through the Nexa SDK, enabling low-latency, privacy-preserving multilingual translation with zero internet dependency. Optimized on-device model loading, memory management, and inference pipeline for mobile hardware constraints — delivering real-time translations while keeping all user data local.",
+    image: android,
+    tags: ["Android Studio", "Kotlin", "Nexa SDK", "GGUF", "LLM", "On-Device ML", "NLP", "Offline AI", "Quantization"]
   }
 
 ];
