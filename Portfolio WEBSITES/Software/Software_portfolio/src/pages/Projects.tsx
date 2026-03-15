@@ -28,6 +28,7 @@ import mac from './images/MAC.png';
 import aws from './images/AWS.png';
 import rev from './images/REVIU.png';
 import rtt from './images/RTT.png';
+import datinggame from './images/datinggame.svg';
 
 
 // Define TypeScript interface for project objects
@@ -247,6 +248,13 @@ const projects: Project[] = [
     description: "Built a fully offline Android translation application using the Nexa SDK with GGUF quantized large language models running entirely on-device. Leveraged Android Studio and Kotlin to integrate GGUF model inference through the Nexa SDK, enabling low-latency, privacy-preserving multilingual translation with zero internet dependency. Optimized on-device model loading, memory management, and inference pipeline for mobile hardware constraints — delivering real-time translations while keeping all user data local.",
     image: android,
     tags: ["Android Studio", "Kotlin", "Nexa SDK", "GGUF", "LLM", "On-Device ML", "NLP", "Offline AI", "Quantization"]
+  },
+  {
+    id: 29,
+    title: "Dating Game — Cross-Platform Dating App",
+    description: "Designed and developed a cross-platform dating application for iOS and Android named Dating Game. Built with React Native for a unified codebase across both platforms, featuring real-time match discovery, swipe-based UI interactions, in-app chat with Firebase Realtime Database, and user profile management backed by Firebase Authentication. Implemented a matching algorithm that ranks profiles based on shared interests and proximity, with push notifications for new matches and messages.",
+    image: datinggame,
+    tags: ["React Native", "iOS", "Android", "Firebase", "Realtime Database", "Firebase Auth", "Push Notifications", "Mobile"]
   }
 
 ];
